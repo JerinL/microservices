@@ -1,0 +1,18 @@
+##spring :
+##  application :
+##    name : SpringMongo
+#
+#
+#    data:
+#      mongodb:
+#        uri: mongodb://localhost:27017/my-first-db
+#  #        host : localhost
+#  #        port : 27017
+#  #        database: mongo-demo
+#
+#
+#
+#
+##  logging:
+##    level:
+##      root: DEBUG
