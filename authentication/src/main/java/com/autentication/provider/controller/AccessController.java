@@ -4,11 +4,9 @@ import com.autentication.provider.entiry.User;
 import com.autentication.provider.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -24,6 +22,14 @@ public class AccessController {
         user.setUserId(String.valueOf(UUID.randomUUID()));
         User savedUser = usersRepository.save(user);
         System.out.println("Saved User: " + savedUser);
+        return ResponseEntity.ok(savedUser);
+    }
+
+
+
+    @GetMapping("/users")
+    public ResponseEntity<List<User>> getUsers(){
+        List<User> savedUser = usersRepository.findAll();
         return ResponseEntity.ok(savedUser);
     }
 }
