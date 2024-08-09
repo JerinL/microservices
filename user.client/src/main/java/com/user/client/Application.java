@@ -21,6 +21,8 @@ public class Application {
 	@Lazy
 	private RestTemplate restTemplate;
 
+
+
 	@Value("${emp.server.url}")
 	public String url;
 
