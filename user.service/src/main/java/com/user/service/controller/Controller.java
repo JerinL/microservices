@@ -37,10 +37,10 @@ public class Controller {
         System.out.println("Test"+apiProperties.getNotification());
             ResponseEntity<List<User>> users = feignInterface.getUsers();
     //        ResponseEntity<List> user = restTemplate.exchange(apiProperties.getUser(), HttpMethod.GET, null, List.class);
-            ResponseEntity<String> notify = restTemplate.exchange(apiProperties.getNotification(), HttpMethod.GET, null, String.class);
+            //ResponseEntity<String> notify = restTemplate.exchange(apiProperties.getNotification(), HttpMethod.GET, null, String.class);
             Map<String,Object> result = new HashMap<>();
             result.put("users",users.getBody());
-            result.put("notify",notify.getBody());
+            //result.put("notify",notify.getBody());
             return result;
 
     }
