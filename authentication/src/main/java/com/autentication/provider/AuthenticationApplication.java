@@ -25,7 +25,7 @@ public class AuthenticationApplication {
 	public static void initializeFirebase() throws IOException {
 		if (FirebaseApp.getApps().isEmpty()) {
 			FileInputStream serviceAccount =
-					new FileInputStream("D:\\MICROSERVICE\\microservices\\authentication\\src\\main\\resources\\serviceAccountKey.json");
+					new FileInputStream("D:\\MICROSERVICE\\microservices\\authentication\\src\\main\\resources");
 			FirebaseOptions options = new FirebaseOptions.Builder()
 					.setCredentials(GoogleCredentials.fromStream(serviceAccount))
 					.build();
