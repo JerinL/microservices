@@ -24,4 +24,19 @@ public class CustomerController {
     public List<Customer> getCustomer() throws ExecutionException, InterruptedException {
         return customerService.getCustomer();
     }
+
+    @GetMapping("/{id}")
+    public Customer getCustomerById(@PathVariable("id") String customerId) throws ExecutionException, InterruptedException {
+        return customerService.getCustomerById(customerId);
+    }
+
+    @PutMapping()
+    public String updateCustomer(@RequestBody Customer customer) throws ExecutionException, InterruptedException {
+        return customerService.updateCustomer(customer);
+    }
+
+    @DeleteMapping("/{id}")
+    public String updateCustomer(@PathVariable("id") String id){
+        return customerService.deleteCustomer(id);
+    }
 }
