@@ -32,4 +32,5 @@ public class AccessController {
         List<User> savedUser = usersRepository.findAll();
         return ResponseEntity.ok(savedUser);
     }
+
 }
