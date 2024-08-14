@@ -1,10 +1,10 @@
-package com.euruka.server;
+package com.api.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EurekaServerTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {
